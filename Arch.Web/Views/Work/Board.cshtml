@@ -225,7 +225,7 @@
                         $(".inprogress").html(inProgressHtml);
                         inProgressCount++;
                     }
-                    if (e[i].TaskStatusId == parseInt("@Arch.Core.Enums.TaskStatusTypes.Done")) {
+                    if (e[i].TaskStatusId == parseInt("@Arch.Core.Enums.TaskStatusTypes.Done")) { 
                         doneHtml += $("#taskCard").html().replace(/##taskId/g, e[i].Id).replace(/##taskStatusId/g, e[i].TaskStatusId).replace(/##Assigned/g, ($.ErcanAyhan.ToTitleCase(e[i].Assigned) == undefined ? "Atanacak Biri" : $.ErcanAyhan.ToTitleCase(e[i].Assigned)))
                         .replace(/##TaskStatusName/g, e[i].TaskStatusName).replace(/##Title/g, $.ErcanAyhan.ToTitleCase(e[i].Title)).replace(/##Description/g, e[i].Description == null ? "" : e[i].Description).
                             replace(/##ProjectName/g, e[i].ProjectName).replace(/##RequestedBy/g, $.ErcanAyhan.ToTitleCase(e[i].RequestedBy))
